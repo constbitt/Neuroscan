@@ -1,0 +1,144 @@
+.section3 {
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    opacity: 1;
+}
+
+.frame34 {
+    width: 1296px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 140px;
+    opacity: 1;
+}
+
+.ladder {
+    width: 500px;
+    height: 500px;
+    gap: 0px;
+    opacity: 1;
+}
+
+.frame30 {
+    width: 656px;
+    height: auto;
+    gap: 30px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.frame33 {
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    opacity: 1;
+}
+
+.frame33-text-title {
+    width: 656px;
+    height: 39px;
+    gap: 0px;
+    opacity: 1;
+    font-family: Poppins, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.4px;
+    text-align: left;
+    color: #37517E;
+}
+
+.frame33-text-description {
+    width: 656px;
+    height: 48px;
+    gap: 0px;
+    opacity: 1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #444444;
+}
+
+.frame32 {
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.frame31 {
+    width: 100%;
+    height: auto;
+    gap: 0px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 1;
+}
+
+.frame31-text {
+    width: 100px;
+    height: 18px;
+    gap: 0px;
+    opacity: 1;
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: left;
+    color: #37517E;
+}
+
+.frame31-percentage {
+    width: 26px;
+    height: 18px;
+    gap: 0px;
+    opacity: 1;
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: left;
+    color: #37517E;
+}
+
+.progressbar {
+    width: 100%;
+    height: 10px;
+    gap: 0px;
+    border-radius: 2px;
+    opacity: 1;
+    background-color: #D9D9D9;
+    position: relative;
+    overflow: hidden;
+}
+
+.rectangle {
+    width: 450px;
+    height: 10px;
+    gap: 0px;
+    opacity: 1;
+    background-color: #4668A2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

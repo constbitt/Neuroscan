@@ -1,0 +1,148 @@
+.header {
+  position: fixed;
+  width: 100%;
+  max-width: 1920px;
+  height: 73px;
+  padding: 16px 0;
+  gap: 0px;
+  opacity: 1;
+  background-color: rgba(40, 58, 90, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.frame15 {
+  width: 1296px;
+  height: 41px;
+  gap: 0px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 1;
+}
+
+.frame39 {
+  width: 267px;
+  height: 41px;
+  gap: 10px;
+  opacity: 1;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.frame14 {
+  width: 868px;
+  height: 41px;
+  gap: 40px;
+  opacity: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: transparent;
+}
+
+.frame38 {
+  width: 667px;
+  height: 41px;
+  gap: 0px;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-box {
+  width: 267px;
+  height: 21px;
+  gap: 0px;
+  opacity: 1;
+  font-family: 'Jost', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 21px;
+  text-align: left;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.text-block {
+  font-family: 'Jost', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22.5px;
+  text-align: left;
+  color: white;
+}
+
+.text-block:hover {
+  color: #C3C3C3;
+}
+
+.text-block.contacts {
+  color: #B247E4;
+}
+
+.text-block.contacts:hover {
+  color: #B280C7;
+}
+
+.btn2 {
+  border: 2px solid #B247E4;
+  width: auto;
+  height: 41px;
+  padding: 10px 28px;
+  gap: 10px;
+  border-radius: 4px;
+  opacity: 1;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: 'Jost', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: center;
+}
+
+
+.btn2:hover {
+  background-color: #B247E4;
+}
+
+.btn2:active {
+  transform: scale(0.95);
+}
+
+.header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.header nav ul li {
+  display: inline;
+}
+
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
