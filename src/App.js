@@ -52,7 +52,6 @@ function App() {
         scrollToSection5={scrollToSection5}
         handleSectorMainClick={handleSectorMainClick}  // Add this line
       />
-      <AboveMain />
       <SectorMain ref={sectorMainRef} />
       <Section1 ref={section1Ref} handleSectorMainClick={handleSectorMainClick} />
       <Section2 ref={section2Ref} />

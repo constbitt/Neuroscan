@@ -6,9 +6,9 @@ import IconUp from './IconUp.png';
 
 const Section2 = forwardRef((props, ref) => {
   const [activeItems, setActiveItems] = useState({
-    0: true,
-    1: true,
-    2: true
+    0: false,
+    1: false,
+    2: false
   });
 
   const handleClick = (index) => {
@@ -23,16 +23,16 @@ const Section2 = forwardRef((props, ref) => {
       <div className="frame18">
         <div className="frame17">
           <div className="frame16">
-            <p className="work-text">Как это работает?</p>
+            <p className="work-text">Как это работает???</p>
             <p className="description-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+            Искусственный интеллект запрограммирован на распознавание патологий дыхательной системы кошек и собак, анализируя структуры органов грудной полости на рентгеновских снимках.
             </p>
           </div>
           <div className="list">
             {[ 
-              { number: '01', title: 'Загрузка Снимков', description: 'Просто загрузите рентгеновские снимки вашего питомца в нашу безопасную платформу.' },
-              { number: '02', title: 'Анализ', description: 'Наша искусственная интеллект-система, разработанная с учетом новейших исследований, анализирует снимки и выделяет потенциальные проблемы.' },
-              { number: '03', title: 'Отчет', description: 'В течение 24 часов вы получите детализированный отчет с рекомендациями от наших ветеринарных консультантов.' }
+              { number: '01', title: 'Загрузка Снимков Боковой Проекции', description: 'Просто загрузите рентгеновский снимок вашего питомца в нашу платформу.' },
+              { number: '02', title: 'Анализ', description: 'Искусственный интеллект анализирует снимки и выделяет неестественные очаги в легочной ткани.' },
+              { number: '03', title: 'Отчет', description: 'Вы получаете графический отчет имеющихся патологий с процентной вероятностью за считанные минуты.' }
             ].map((item, index) => (
               <div 
                 className={`item ${activeItems[index] ? 'expanded' : ''}`} 

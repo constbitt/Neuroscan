@@ -20,7 +20,8 @@ const Section4 = forwardRef((props, ref) => {
             </div>
           </div>
           <div className="frame25-text">
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+          Платформа создавалась на основе базовых принципов диагностики: быстрота и точность определения заболевания, 
+          а интерфейс программы основан на доступности и понимании использования.    
           </div>
         </div>
         <div className="frame24">
@@ -46,7 +47,7 @@ const Section4 = forwardRef((props, ref) => {
                 <img src={Arrow} alt="Arrow" className="arrow" />
               </div>
               <div className="frame27-text">
-                Наша платформа предоставляет результаты значительно быстрее, чем традиционные методы.
+              Платформа благодаря качественной настройке систем диагностирования и искуственного интелекта может предоставлять результат в течение нескольких минут.
               </div>
             </div>
           </div>
@@ -59,7 +60,7 @@ const Section4 = forwardRef((props, ref) => {
                 <img src={Lock} alt="Lock" className="lock" />
               </div>
               <div className="frame27-text">
-                Легкий и интуитивно понятный интерфейс позволяет ветеринарным специалистам быстро осваивать нашу систему.
+              Легкий и понятный интерфейс позволяет ветеринарным специалистам быстро осваивать нашу систему.
               </div>
             </div>
           </div>

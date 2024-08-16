@@ -37,7 +37,7 @@ const SectorMain = forwardRef((props, ref) => {
   const handleClic = () => {
     if (btnState !== 'inactive') {
       setBtnState('click');
-      setShowFileUploader(true); // Show file uploader
+      setShowFileUploader(true); 
       setTimeout(() => {
         setBtnState('default');
         //
@@ -58,6 +58,7 @@ const SectorMain = forwardRef((props, ref) => {
     setTimeout(() => {
       setShowFileUploader(false); // Hide file uploader after fade-out
     }, 700); // Match this with the duration of the fade-out animation
+    setSelectedFile(null);
   };
 
 
@@ -81,6 +82,7 @@ const SectorMain = forwardRef((props, ref) => {
         setError(true);
         setErrorType('format');
         setErrorMessage('Неправильный формат файла. Разрешены JPG и PNG');
+        setSelectedFile(null);
         return;
       }
       setError(false);
@@ -158,6 +160,7 @@ const SectorMain = forwardRef((props, ref) => {
         setErrorType('format');
         setErrorMessage('Неправильный формат файла. Разрешены JPG и PNG');
         return;
+        setSelectedFile(null);
       }
       setError(false);
       setErrorType('');
@@ -194,6 +197,7 @@ const SectorMain = forwardRef((props, ref) => {
         setErrorType('format');
         setErrorMessage('Неправильный формат файла. Разрешены JPG и PNG');
         return;
+        setSelectedFile(null);
       }
       setError(false);
       setErrorType('');
@@ -246,6 +250,7 @@ const SectorMain = forwardRef((props, ref) => {
       setErrorMessage('Произошла ошибка. Попробуйте снова загрузить фотографию.');
       setInfoText('Напоминаем, программа поддерживает снимки формата JPG и PNG');
       setUploadStage('');
+      setSelectedFile(null);
     }
   };
 
@@ -279,6 +284,7 @@ const SectorMain = forwardRef((props, ref) => {
         setErrorMessage('Произошла ошибка. Попробуйте снова загрузить фотографию.');
         setInfoText('Напоминаем, программа поддерживает снимки формата JPG и PNG');
         setUploadStage('');
+        setSelectedFile(null);
       }
     }
   };
@@ -341,10 +347,7 @@ const SectorMain = forwardRef((props, ref) => {
         <div className="frame2">
           <div className="frame1">
             <div className="main-text">
-              AI - инструмент для <br />
-              диагностики <br />
-              рентгеновских снимков <br />
-              в ветеринарии
+              AI - инструмент для диагностики патологий дыхательной системы на рентгеновских снимках в ветеринарии 
             </div>
             <div className="sub-text">
               Компания «Нейроскан» представляет уникальный инструмент для вашей клиники.
@@ -392,7 +395,7 @@ const SectorMain = forwardRef((props, ref) => {
           <div className="frame5">
             <div className="frame7">
               <div className="text-top">
-                {error && errorType !== 'format' ? 'Произошла ошибка \n Попробуйте снова загрузить фотографию' : 'Диагностика рентгеновских снимков легких у кошек и собак'}
+                {error && errorType !== 'format' ? 'Произошла ошибка \n Попробуйте снова загрузить фотографию' : 'Диагностика рентгеновских снимков кошек и собак в боковой проекции'}
               </div>
               <div className="text-bottom">
                 {infoText}
@@ -419,6 +422,9 @@ const SectorMain = forwardRef((props, ref) => {
                       <div className='frame53'>
                         <div className='frame52'>
                           <img src={imageUrl} alt="Uploaded" className="uploaded-image" />
+                          <div className={`uploaded-title`}>
+                            {imageTitle}
+                          </div>
                         </div>
                         <div className='frame48'>
                           <div className="health-status-text">Здоровые: 60%</div>
@@ -427,7 +433,7 @@ const SectorMain = forwardRef((props, ref) => {
                           <div className="health-status-text">Новообразование: 1%</div>
                         </div>
                       </div>
-                      <button className="btn1" onClick={handleDownloadClick}>Скачать сегментированный снимок</button>
+                      <button className="btn1-ne" onClick={handleDownloadClick}>Скачать сегментированный снимок</button>
                     </div>
                     <div className="right-container">
                       <img src={Clinic} alt="Clinic" className="clinic-image" />

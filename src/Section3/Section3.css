@@ -43,38 +43,53 @@
 
 .frame33-text-title {
     width: 656px;
-    height: 39px;
+    height: 41px;
     gap: 0px;
     opacity: 1;
-    font-family: Poppins, sans-serif;
-    font-size: 32px;
+    font-family: 'Jost', sans-serif;
+    font-size: 34px;
     font-weight: 700;
-    line-height: 38.4px;
+    line-height: 40.8px;
     text-align: left;
     color: #37517E;
+    margin-bottom: 10px;
 }
 
 .frame33-text-description {
     width: 656px;
-    height: 48px;
+    height: 44px;
     gap: 0px;
     opacity: 1;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-style: italic;
+    font-size: 15px;
     font-weight: 400;
     line-height: 24px;
     text-align: left;
-    color: #444444;
+    color: #848484;
 }
 
 .frame32 {
-    width: 100%;
-    height: auto;
+    width: 656px;
+    height: 334px;
     gap: 10px;
     opacity: 1;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.percents {
+    width: 312px;
+    height: 334px;
+    gap: 0px;
+    opacity: 1;
+}
+
+.diagram {
+    width: 334px;
+    height: 334px;
+    gap: 0px;
+    opacity: 1;
 }
 
 .container {
@@ -133,12 +148,10 @@
 }
 
 .rectangle {
-    width: 450px;
     height: 10px;
-    gap: 0px;
-    opacity: 1;
     background-color: #4668A2;
     position: absolute;
     top: 0;
     left: 0;
+    transition: width 0.5s ease;
 }

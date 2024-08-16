@@ -53,11 +53,11 @@
 
 .main-text {
   width: 670px;
-  height: 209px;
+  height: 265px;
   gap: 0px;
   opacity: 1;
   font-family: 'Jost', sans-serif;
-  font-size: 56px;
+  font-size: 58px;
   font-weight: 740;
   line-height: 56px;
   text-align: left;
@@ -66,6 +66,7 @@
 }
 
 .sub-text {
+  margin-top: 10px;
   width: 670px;
   height: 58px;
   gap: 0px;
@@ -130,13 +131,13 @@
 .file-uploader {
   width: 100%;
   max-width: 1920px;
-  height: 960px;
+  height: 100%;
   background: #37517E;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute; /* Ensure it overlays */
-  top: 160px;
+  top: 100px;
   left: 0;
   z-index: 2; /* Higher z-index to ensure it appears on top */
   flex-direction: column;
@@ -376,6 +377,37 @@
   cursor: not-allowed;
 }
 
+.btn1-ne {
+  width: 80%;
+  margin-left: 20%;
+  height: auto;
+  padding: 8px 33px;
+  border-radius: 4px;
+  background-color: #B247E4;
+  color: #FFFFFF;
+  font-family: 'Jost', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10%;
+}
+
+.btn1-ne:hover {
+  background-color: #B247E480;
+}
+
+.btn1-ne:active {
+  background-color: #9632C6;
+}
+
+.btn1-ne:disabled {
+  background-color: #90769C;
+  cursor: not-allowed;
+}
+
 .text-upload {
   width: 377px;
   height: 24px;
@@ -430,11 +462,12 @@
 
 .uploaded-image-container {
   display: flex;
-  justify-content: space-between; /* Space out the containers */
+  justify-content: right; /* Space out the containers */
   align-items: center; /* Center align items vertically */
   width: 100%;
   max-width: 1200px; /* Adjust as needed */
   padding: 0 20px; /* Padding to prevent images from touching edges */
+  
 }
 
 .left-container {
@@ -442,26 +475,43 @@
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center align items horizontally */
   width: 50%; /* Take half of the width */
-  height: 100%;
+  height: 90%;
   justify-content: space-between; /* Distribute space evenly, with the button at the bottom */
 }
 
 .right-container {
   width: 50%; /* Take half of the width */
+  height: 100%;
   display: flex;
   justify-content: center; /* Center the clinic image */
   align-items: center; /* Center align items vertically */
 }
 
+
 .uploaded-image {
-  max-width: 100%; /* Ensure image fits container */
+  width: 100%; /* Ensure image fits container */
+  height: auto; 
+  max-height: 200px;
+  opacity: 1;
   border-radius: 10px;
-  border: 2px solid #B247E4;
+}
+
+.uploaded-title {
+  width: 100%;
+  height: 30px;
+  opacity: 1;
+  font-family: 'Jost', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #FFFFFF;
 }
 
 .clinic-image {
-  width: 500px; /* Full width of the container */
-  height: 500px; /* Maintain aspect ratio */
+  width: 400px; /* Full width of the container */
+  height: 400px; /* Maintain aspect ratio */
   opacity: 1;
 }
 
@@ -477,13 +527,14 @@
 .results-label {
   width: 100%;
   font-family: Jost, sans-serif;
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 900;
   line-height: 38.4px;
   letter-spacing: 1px;
   text-align: center;
   color: #FFFFFF;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-left: 10%;
 }
 
 .loading-ellipse {
@@ -517,17 +568,19 @@
   flex-direction: row;
   gap: 20px;
   opacity: 1;
-  width: 596px; /* Adjusted the width */
-  height: 284px; /* Adjusted the height */
+  width: 90%; 
+  height: 80%;
+  margin-left: 30%;
 }
 
 .frame52 {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   opacity: 1;
-  width: 320px; /* Adjusted the width */
-  height: 284px; /* Adjusted the height */
+  width: 50%;
+  height: 300px; 
+
 }
 
 .frame48 {
@@ -542,7 +595,7 @@
 .health-status-text {
   height: 24px;
   font-family: Jost, sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 1px;
@@ -599,13 +652,13 @@
 }
 
 .scan-image {
-  width: 320px;
-  max-height: 320px;
+  width: 80%;
+  height: 55%;
   position: absolute; 
-  top: 50%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 25px 25px 25px 25px;
+  border-radius: 12px 12px 12px 12px;
   opacity: 1;
   z-index: 10; 
   transition: opacity 0.5s ease;
@@ -615,11 +668,12 @@
   opacity: 0;
 }
 
+
 .image-title {
   width: 320px;
   height: 48px;
   position: absolute; 
-  bottom: 8px; 
+  bottom: 5%; 
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
@@ -633,6 +687,7 @@
   z-index: 10; 
   transition: opacity 0.5s ease;
 }
+
 
 .image-title.fade-out {
   opacity: 0;
@@ -677,7 +732,7 @@
 }
 
 .button {
-  width: 377px;
+  width: 60%;
   height: 48px;
   display: flex;
   align-items: center;
@@ -715,7 +770,7 @@
   height: 50px;
   position: absolute;
   top: 60px;
-  right: 40px; 
+  right: 30px; 
   z-index: 20; 
   cursor: pointer;
   background: #ffffff;

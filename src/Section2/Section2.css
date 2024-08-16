@@ -12,7 +12,7 @@
 }
 
 .item {
-    width: 629px;
+    width: 640px;
     max-height: auto;
     opacity: 1;
     display: flex;
@@ -111,12 +111,12 @@
 }
 
 .description-text {
-    width: 629px;
-    height: 45px;
+    width: 640px;
+    height: 48px;
     font-family: 'Jost', sans-serif;
     font-size: 15px;
     font-weight: 400;
-    line-height: 22.5px;
+    line-height: 24px;
     text-align: left;
     color: #848484;
     margin: 0px;
@@ -165,7 +165,7 @@
 }
 
 .frame19-text-loading {
-    width: 150px;
+    width: 2000px;
     height: 24px;
     gap: 0;
     opacity: 1;
@@ -174,7 +174,7 @@
     font-weight: 500;
     line-height: 24px;
     text-align: left;
-    color: #47B2E4;
+    color: #293C5E;
 }
 
 .frame19-text-01 {
@@ -182,11 +182,11 @@
 }
 
 .frame19-text-loading.active {
-    color: #293C5E;
+    color: #47B2E4;
 }
 
 .frame19-text-loading.inactive {
-    color: #47B2E4;
+    color: #293C5E;
 }
 
 .item.collapsed .text-below-frame21 {
