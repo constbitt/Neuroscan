@@ -296,9 +296,10 @@ const SectorMain = forwardRef((props, ref) => {
       const result = await response.json();
       const formattedDescription = Object.entries(result)
         .map(([key, value]) => {
+          const capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
           const numValue = Number(value);
           const roundedValue = !isNaN(numValue) ? Math.round(numValue) : value;
-          return `${key}: ${roundedValue}`;
+          return `${capitalizedKey}: ${roundedValue}`;
         })
         .join("\n");
   
@@ -308,8 +309,6 @@ const SectorMain = forwardRef((props, ref) => {
       setHealthStatus("Не удалось загрузить результаты");
     }
   };
-  
-  
 
   const fetchProcessedImage = async (name) => {
     const delay = 2000;
@@ -576,7 +575,7 @@ const SectorMain = forwardRef((props, ref) => {
                 />
                 <button
                   className={`button ${isButtonDisabled ? "disabled" : ""}`}
-                  disabled={isButtonDisabled && !uploadError} // Enable button if there's an upload error
+                  disabled={isButtonDisabled && !uploadError} 
                   onClick={handleUploadButtonClick}
                 >
                   {uploadError
