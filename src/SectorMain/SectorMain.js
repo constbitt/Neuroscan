@@ -12,6 +12,8 @@ import Clinic from "./Clinic.png";
 import crossImage from "./Cross.png";
 
 const SectorMain = forwardRef((props, ref) => {
+  const [healthStatus, setHealthStatus] = useState("");
+
   const [btnState, setBtnState] = useState("default");
   const [showFileUploader, setShowFileUploader] = useState(false);
   const [fadeClass, setFadeClass] = useState("");
@@ -282,6 +284,28 @@ const SectorMain = forwardRef((props, ref) => {
     }
   };
 
+  const fetchImageDescription = async (name) => {
+    try {
+      const response = await fetch(
+        `https://нейроскан.рф:8080/images/download_description?image_name=${name}`
+      );
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      const result = await response.json();
+      const formattedDescription = Object.entries(result)
+        .map(([key, value]) => `${key}: ${value}`)
+        .join("\n");
+  
+      setHealthStatus(formattedDescription);
+    } catch (error) {
+      console.error("Ошибка при получении описания изображения:", error);
+      setHealthStatus("Не удалось загрузить результаты");
+    }
+  };
+  
+
   const fetchProcessedImage = async (name) => {
     const delay = 2000;
     let attempt = 1;
@@ -293,7 +317,7 @@ const SectorMain = forwardRef((props, ref) => {
         const response = await fetch(
           `https://нейроскан.рф:8080/images/download?image_name=${name}`
         );
-  
+
         if (response.status === 425) {
           console.log(`Попытка ${attempt} не удалась, повтор через ${delay} мс`);
           await new Promise((resolve) => setTimeout(resolve, delay));
@@ -304,6 +328,7 @@ const SectorMain = forwardRef((props, ref) => {
           const url = URL.createObjectURL(blob);
           setImageUrl(url);
           setShowResultsLabel(true);
+          await fetchImageDescription(name);
           break;
         } else {
           throw new Error("Ошибка при скачивании файла");
@@ -467,16 +492,7 @@ const SectorMain = forwardRef((props, ref) => {
                             </div>
                             <div className="frame48">
                               <div className="health-status-text">
-                                Здоровые: 60%
-                              </div>
-                              <div className="health-status-text">
-                                Пневмоторакс: 10%
-                              </div>
-                              <div className="health-status-text">
-                                Коллапс трахеи: 5%
-                              </div>
-                              <div className="health-status-text">
-                                Новообразование: 1%
+                              {healthStatus}
                               </div>
                             </div>
                           </div>
