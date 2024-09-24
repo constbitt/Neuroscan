@@ -295,7 +295,11 @@ const SectorMain = forwardRef((props, ref) => {
   
       const result = await response.json();
       const formattedDescription = Object.entries(result)
-        .map(([key, value]) => `${key}: ${value}`)
+        .map(([key, value]) => {
+          const numValue = Number(value);
+          const roundedValue = !isNaN(numValue) ? Math.round(numValue) : value;
+          return `${key}: ${roundedValue}`;
+        })
         .join("\n");
   
       setHealthStatus(formattedDescription);
@@ -304,6 +308,7 @@ const SectorMain = forwardRef((props, ref) => {
       setHealthStatus("Не удалось загрузить результаты");
     }
   };
+  
   
 
   const fetchProcessedImage = async (name) => {
