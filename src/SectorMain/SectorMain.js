@@ -295,20 +295,26 @@ const SectorMain = forwardRef((props, ref) => {
   
       const result = await response.json();
       const formattedDescription = Object.entries(result)
-        .map(([key, value]) => {
-          const capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
-          const numValue = Number(value);
-          const roundedValue = !isNaN(numValue) ? Math.round(numValue) : value;
-          return `${capitalizedKey}: ${roundedValue}`;
-        })
-        .join("\n");
-  
-      setHealthStatus(formattedDescription);
+      .map(([key, value]) => {
+        const capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
+        const strValue = String(value);
+        const formattedValue = strValue.includes("%")
+          ? `${parseFloat(strValue).toFixed(2)}%`
+          : strValue;
+        return (
+          <div key={key}>
+            {capitalizedKey}: {formattedValue}
+          </div>
+        );
+      });
+    setHealthStatus(formattedDescription);
+    
     } catch (error) {
       console.error("Ошибка при получении описания изображения:", error);
       setHealthStatus("Не удалось загрузить результаты");
     }
   };
+  
 
   const fetchProcessedImage = async (name) => {
     const delay = 2000;
