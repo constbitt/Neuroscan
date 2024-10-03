@@ -19,20 +19,36 @@ function App() {
   const sectorMainRef = useRef(null);
 
   const scrollToSection1 = () => {
-    section1Ref.current.scrollIntoView({ behavior: 'smooth' });
-  };
+    const section1Position = section1Ref.current.getBoundingClientRect().top + window.scrollY; 
+    window.scrollTo({ 
+      top: section1Position - 105,
+      behavior: 'smooth'
+    });
+  };  
 
   const scrollToSection2 = () => {
-    section2Ref.current.scrollIntoView({ behavior: 'smooth' });
-  };
+    const section2Position = section2Ref.current.getBoundingClientRect().top + window.scrollY; 
+    window.scrollTo({ 
+      top: section2Position - 100,
+      behavior: 'smooth'
+    });
+  };  
 
   const scrollToSection3 = () => {
-    section3Ref.current.scrollIntoView({ behavior: 'smooth' });
-  };
+    const section3Position = section3Ref.current.getBoundingClientRect().top + window.scrollY; 
+    window.scrollTo({ 
+      top: section3Position - 75,
+      behavior: 'smooth'
+    });
+  };  
 
   const scrollToSection4 = () => {
-    section4Ref.current.scrollIntoView({ behavior: 'smooth' });
-  };
+    const section4Position = section4Ref.current.getBoundingClientRect().top + window.scrollY; 
+    window.scrollTo({ 
+      top: section4Position - 90,
+      behavior: 'smooth'
+    });
+  };  
 
   const scrollToSection5 = () => {
     section5Ref.current.scrollIntoView({ behavior: 'smooth' });

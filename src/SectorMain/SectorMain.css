@@ -485,6 +485,7 @@
   display: flex;
   justify-content: center; /* Center the clinic image */
   align-items: center; /* Center align items vertically */
+  flex-direction: column;
 }
 
 
@@ -603,6 +604,12 @@
   color: #FFFFFF;
   opacity: 1;
   
+}
+
+.explanation_text {
+  font-family: Jost, sans-serif;
+  font-size: 10px;
+  color: #FFFFFF;
 }
 
 .tmp-container {

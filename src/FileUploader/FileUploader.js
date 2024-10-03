@@ -166,7 +166,7 @@ const FileUploader = () => {
       setBlurred(false);
       await new Promise((resolve) => setTimeout(resolve, 500));
 
-      const response = await fetch('http://158.160.168.126:8080/images/upload', {
+      const response = await fetch('https://158.160.168.126:8080/images/upload', {
         method: 'POST',
         body: formData,
         signal: controller.signal,
@@ -196,7 +196,7 @@ const FileUploader = () => {
     setUploadStage('Искусственный интеллект изучает фото');
 
     try {
-      const response = await fetch(`http://158.160.168.126:8080/images/download?image_name=${name}`);
+      const response = await fetch(`https://158.160.168.126:8080/images/download?image_name=${name}`);
 
       if (response.status === 425 && attempt < maxAttempts) {
         console.log(`Попытка ${attempt} не удалась, повтор через ${delay} мс`);

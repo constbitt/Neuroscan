@@ -19,6 +19,8 @@ const SectorMain = forwardRef((props, ref) => {
   const [fadeClass, setFadeClass] = useState("");
   const [uploadError, setUploadError] = useState(false);
 
+  const [explanation, setExplanation] = useState("Проценты указывают на уверенность модели в наличии того или иного заболевания, где 0% - точно нет, 100% - точно есть");
+
   useImperativeHandle(ref, () => ({
     handleClic,
   }));
@@ -307,7 +309,14 @@ const SectorMain = forwardRef((props, ref) => {
           </div>
         );
       });
-    setHealthStatus(formattedDescription);
+      if (formattedDescription[0].key == "Найдено болезней") {
+        setHealthStatus("Система не обнаружила болезней");
+        setExplanation("");
+      }
+      else {
+        setExplanation("Проценты указывают на уверенность модели в наличии того или иного заболевания, где 0% - точно нет, 100% - точно есть");
+        setHealthStatus(formattedDescription);
+      }
     
     } catch (error) {
       console.error("Ошибка при получении описания изображения:", error);
@@ -415,12 +424,12 @@ const SectorMain = forwardRef((props, ref) => {
         <div className="frame2">
           <div className="frame1">
             <div className="main-text">
-              AI - инструмент для диагностики патологий дыхательной системы на
+              AI—инструмент для диагностики патологий дыхательной системы на
               рентгеновских снимках в ветеринарии
             </div>
             <div className="sub-text">
               Компания «Нейроскан» представляет уникальный инструмент для вашей
-              клиники.
+              клиники
             </div>
             <button
               className={`btn1-new ${btnState}`}
@@ -503,6 +512,10 @@ const SectorMain = forwardRef((props, ref) => {
                             <div className="frame48">
                               <div className="health-status-text">
                               {healthStatus}
+
+                              </div>
+                              <div className = "explanation_text">
+                              {explanation}
                               </div>
                             </div>
                           </div>

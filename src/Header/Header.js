@@ -21,9 +21,9 @@ const Header = ({ scrollToSection1, scrollToSection2, scrollToSection3, scrollTo
     scrollToTop();
 
     setTimeout(() => {
-      handleSectorMainClick(); // Вызов handleClic из SectorMain после скролла
+      handleSectorMainClick();
       setBtnState('default');
-    }, 600); // Увеличил задержку до 600мс, чтобы быть уверенным, что скролл завершится
+    }, 600);
   };
 
   return (
