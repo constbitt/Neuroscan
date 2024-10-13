@@ -314,7 +314,7 @@ const SectorMain = forwardRef((props, ref) => {
         setExplanation("");
       }
       else {
-        setExplanation("Проценты указывают на уверенность модели в наличии того или иного заболевания, где 0% - точно нет, 100% - точно есть");
+        //setExplanation("Проценты указывают на уверенность модели в наличии того или иного заболевания, где 0% - точно нет, 100% - точно есть");
         setHealthStatus(formattedDescription);
       }
     
@@ -510,12 +510,13 @@ const SectorMain = forwardRef((props, ref) => {
                               </div>
                             </div>
                             <div className="frame48">
-                              <div className="health-status-text">
-                              {healthStatus}
-
-                              </div>
-                              <div className = "explanation_text">
+                              <div                               
+                              className = "explanation_text">
                               {explanation}
+                              </div>
+                              <div 
+                              className="health-status-text">
+                              {healthStatus}
                               </div>
                             </div>
                           </div>
